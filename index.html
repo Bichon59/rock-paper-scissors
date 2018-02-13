@@ -37,17 +37,27 @@
 		}
 
 		function playerSelection() {
-			select = prompt("Rock/Paper/Scissors").toLowerCase();
+			select = prompt("Rock/Paper/Scissors");
+
+			if (select == null) {
+				return null;
+			}
+
+			select = select.toLowerCase();
 
 			if (select != "rock" && select != "paper" && select != "scissors") {
-				select = prompt("Rock/Paper/Scissors").toString().toLowerCase();
+				console.log("Incorrect entry");
+				select = playerSelection();
 			}
 
 			return select;
 		}
 
 		function play(playerSelection, computerSelection) {
-			if(playerSelection == "paper" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper") {
+			if (playerSelection == undefined) {
+				return "Game left";
+			}
+			else if(playerSelection == "paper" && computerSelection == "rock" || playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "paper") {
 				return "You win: " + playerSelection + " beat " + computerSelection;
 			} else if (playerSelection == computerSelection) {
 				return "Equality: " + playerSelection + " and " + computerSelection + " are the sames";
