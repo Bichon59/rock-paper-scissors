@@ -1,0 +1,33 @@
+#container {
+	margin: 0 auto;
+	width: 70%;
+	text-align: center;
+}
+
+#result {
+	margin: 0 auto;
+	width: 70%;
+	margin-top: 100px;
+}
+
+#result p {
+	text-align: center;
+	font-size: 40px;
+}
+
+.choice {
+	position: relative;
+	display: inline-block;
+	width: 20%;
+	height: 200px;
+	margin: 40px;
+	font-size: 40px;
+	top: 70px;
+ 	/*transition: all .07s ease;*/
+}
+
+.playing {
+	/*transform: scale(1.3);*/
+	border: 3px solid yellow;
+	box-shadow: 0 0 1em yellow;
+}
